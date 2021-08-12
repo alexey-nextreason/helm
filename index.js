@@ -240,7 +240,7 @@ async function run() {
     core.debug(`env: KUBECONFIG="${process.env.KUBECONFIG}"`);
 
     // Render value files using github variables.
-    await renderFiles(valueFiles.concat(["./values.yml"]), {
+    await renderFiles(valueFiles.concat([]), {
       secrets,
       deployment: context.payload.deployment,
     });
